@@ -5,7 +5,7 @@ export const toolsData: Category[] = [
     id: 'dev',
     name: '开发工具',
     tools: [
-      { id: 'json-formatter', name: 'JSON 格式化', description: '美化和校验 JSON 数据', path: '/json-formatter' },
+      { id: 'json-formatter', name: 'JSON 层级视图', description: '带收起展开功能的树状视图工具', path: '/json-formatter' },
       { id: 'sql-formatter', name: 'SQL 格式化', description: '美化 SQL 语句', path: '/sql-formatter' },
       { id: 'uuid-generator', name: 'UUID 生成', description: '生成随机 UUID', path: '/uuid-generator' },
       { id: 'hash-generator', name: '哈希摘要', description: '计算 MD5, SHA 等哈希值', path: '/hash-generator' },
