@@ -15,7 +15,7 @@ const waves = [
 // 点击激活
 let boost = 0;
 
-const onClick = () => {
+const onInteraction = () => {
   boost = 1.0;
 };
 
@@ -77,13 +77,15 @@ onMounted(() => {
   resizeCanvas();
   draw();
   window.addEventListener('resize', resizeCanvas);
-  window.addEventListener('click', onClick);
+  window.addEventListener('click', onInteraction);
+  window.addEventListener('keydown', onInteraction);
 });
 
 onUnmounted(() => {
   cancelAnimationFrame(animationId);
   window.removeEventListener('resize', resizeCanvas);
-  window.removeEventListener('click', onClick);
+  window.removeEventListener('click', onInteraction);
+  window.removeEventListener('keydown', onInteraction);
 });
 </script>
 
