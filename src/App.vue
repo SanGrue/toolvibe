@@ -2,6 +2,7 @@
 import { ref, computed, onMounted, onUnmounted } from 'vue';
 import { useRoute } from 'vue-router';
 import { toolsData } from './data/tools';
+import PulseWave from './components/PulseWave.vue';
 
 const route = useRoute();
 const showBackToTop = ref(false);
@@ -39,15 +40,16 @@ const currentToolName = computed(() => {
 <template>
   <div class="layout">
     <header class="header" :class="{ compact: isToolPage }">
+      <PulseWave />
       <div class="header-container">
         <template v-if="isHome">
-          <h1>ToolVibe</h1>
+          <h1><img src="/favicon.svg" alt="" class="header-logo" />ToolVibe</h1>
           <p>开箱即用的开发工具箱</p>
         </template>
         <template v-else>
           <div class="header-compact">
             <router-link to="/" class="header-home-link">
-              <h1>ToolVibe</h1>
+              <h1><img src="/favicon.svg" alt="" class="header-logo compact-logo" />ToolVibe</h1>
             </router-link>
             <span class="header-divider">|</span>
             <span class="header-tool-name">{{ currentToolName }}</span>
@@ -84,6 +86,8 @@ const currentToolName = computed(() => {
 <style scoped>
 .header {
   transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
 }
 
 .header.compact {
@@ -98,6 +102,21 @@ const currentToolName = computed(() => {
 .header-home-link {
   text-decoration: none;
   color: inherit;
+}
+
+.header-logo {
+  width: auto;
+  vertical-align: text-bottom;
+  margin-right: 0.4rem;
+}
+
+.compact-logo {
+  height: 1.3em;
+}
+
+.header-container {
+  position: relative;
+  z-index: 1;
 }
 
 .header-compact {
