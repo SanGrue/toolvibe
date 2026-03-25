@@ -6,7 +6,8 @@ export const toolsData: Category[] = [
     name: '开发工具',
     tools: [
       { id: 'json-formatter', name: 'JSON 层级视图', description: '带收起展开功能的树状视图工具', path: '/json-formatter' },
-      { id: 'sql-formatter', name: 'SQL 格式化', description: '美化 SQL 语句', path: '/sql-formatter' },
+      { id: 'jwt-decoder', name: 'JWT 解析器', description: '安全在本地解码反编译真实 Token 信息', path: '/jwt-decoder' },
+      { id: 'regex-tester', name: '正则测试台', description: '高亮调试捕获复杂的正则表达式', path: '/regex-tester' },
       { id: 'uuid-generator', name: 'UUID 生成', description: '生成随机 UUID', path: '/uuid-generator' },
       { id: 'hash-generator', name: '哈希摘要', description: '计算 MD5, SHA 等哈希值', path: '/hash-generator' },
       { id: 'base64-converter', name: 'Base64 编解码', description: '文本和图片 base64 相互转换', path: '/base64-converter' },

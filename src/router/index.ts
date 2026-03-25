@@ -9,8 +9,9 @@ const QRCode = () => import('../components/QRCode.vue');
 const KeyboardMouseTest = () => import('../components/KeyboardMouseTest.vue');
 const ColorPicker = () => import('../components/ColorPicker.vue');
 const JsonFormatter = () => import('../components/JsonFormatter.vue');
-const SqlFormatter = () => import('../components/SqlFormatter.vue');
 const UuidGenerator = () => import('../components/UuidGenerator.vue');
+const JwtDecoder = () => import('../components/JwtDecoder.vue');
+const RegexTester = () => import('../components/RegexTester.vue');
 const HashGenerator = () => import('../components/HashGenerator.vue');
 const Base64Converter = () => import('../components/Base64Converter.vue');
 
@@ -26,9 +27,14 @@ const routes = [
     component: JsonFormatter
   },
   {
-    path: '/sql-formatter',
-    name: 'sql-formatter',
-    component: SqlFormatter
+    path: '/jwt-decoder',
+    name: 'jwt-decoder',
+    component: JwtDecoder
+  },
+  {
+    path: '/regex-tester',
+    name: 'regex-tester',
+    component: RegexTester
   },
   {
     path: '/uuid-generator',
